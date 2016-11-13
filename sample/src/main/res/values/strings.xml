@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Sample</string>
+
+    <string-array name="planets">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+        <item>Pluto</item>
+        <item>Mercury1</item>
+        <item>Venus1</item>
+        <item>Earth1</item>
+        <item>Mars1</item>
+        <item>Jupiter1</item>
+        <item>Saturn1</item>
+        <item>Uranus1</item>
+        <item>Neptune1</item>
+        <item>Pluto1</item>
+        <item>2Mercury</item>
+        <item>2Venus</item>
+        <item>2Earth</item>
+        <item>2Mars</item>
+        <item>2Jupiter</item>
+        <item>2Saturn</item>
+        <item>2Uranus</item>
+        <item>2Neptune</item>
+        <item>2Pluto</item>
+    </string-array>
+</resources>
