@@ -11,6 +11,12 @@ public class  mListString implements Serializable {
     private String nilai2;
     private String nilai3;
     private String nilai4;
+    private String nilai5;
+    private String nilai6;
+    private String nilai7;
+    private String nilai8;
+    private String nilai9;
+    private String nilai10;
 
     public mListString() {
     }
@@ -76,5 +82,50 @@ public class  mListString implements Serializable {
 
     public void setNilai4(String nilai4) {
         this.nilai4 = nilai4;
+    }
+    
+    public String getNilai5() {
+        return nilai5;
+    }
+
+    public void setNilai5(String nilai5) {
+        this.nilai5 = nilai5;
+    }
+
+    public String getNilai6() {
+        return nilai6;
+    }
+
+    public void setNilai6(String nilai6) {
+        this.nilai6 = nilai6;
+    }
+
+    public String getNilai7() {
+        return nilai7;
+    }
+
+    public void setNilai7(String nilai7) {
+        this.nilai7 = nilai7;
+    }
+
+    public String getNilai8() {
+        return nilai8;
+    }
+     public void setNilai8(String nilai8) {
+        this.nilai8 = nilai8;
+    }
+
+    public String getNilai9() {
+        return nilai9;
+    }
+    public void setNilai9(String nilai9) {
+        this.nilai9 = nilai9;
+    }
+    
+    public String getNilai10() {
+        return nilai10;
+    }
+    public void setNilai10(String nilai10) {
+        this.nilai9 = nilai10;
     }
 }
