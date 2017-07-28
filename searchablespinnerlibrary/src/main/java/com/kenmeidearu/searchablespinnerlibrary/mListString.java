@@ -25,6 +25,10 @@ public class  mListString implements Serializable {
         this._id=id;
         this.nilai1 = nilai1;
     }
+    public mListString(int id,int nilai6) {
+        this._id=id;
+        this.nilai6 = String.valueOf(nilai6);
+    }
     public mListString(int id,String nilai1, String nilai2) {
         this._id=id;
         this.nilai1 = nilai1;
