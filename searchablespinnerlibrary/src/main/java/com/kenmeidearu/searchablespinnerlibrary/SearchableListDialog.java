@@ -60,7 +60,7 @@ public class SearchableListDialog extends DialogFragment implements
         _strTitle=listTitle;
 
         Bundle args = new Bundle();
-        args.putSerializable(ITEMSLIST, (Serializable) itemlist);
+        args.putSerializable(ITEMSLIST, itemlist);
         multiSelectExpandableFragment.setArguments(args);
 
         return multiSelectExpandableFragment;
@@ -72,7 +72,7 @@ public class SearchableListDialog extends DialogFragment implements
                 SearchableListDialog();
 
         Bundle args = new Bundle();
-        args.putSerializable(ITEMSLIST, (Serializable) items);
+        args.putSerializable(ITEMSLIST, items);
 
         multiSelectExpandableFragment.setArguments(args);
 
