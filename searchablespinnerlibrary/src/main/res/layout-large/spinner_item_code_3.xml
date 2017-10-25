@@ -18,7 +18,7 @@
             android:gravity="left"
             android:text="isihead"
             android:textColor="@android:color/black"
-            android:textSize="14sp">
+            android:textSize="20sp">
         </TextView>
         <TextView
             android:id="@+id/sub"
@@ -27,8 +27,7 @@
             android:layout_below="@id/spinnerHead"
             android:layout_marginLeft="12dp"
             android:layout_marginBottom="2dp"
-            android:text="Enjoy codes"
-            android:textSize="12sp"/>
+            android:text="Enjoy codes" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="0dp"
@@ -43,7 +42,6 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="2dp"
-            android:textSize="12sp"
             android:text="Side codes" />
     </LinearLayout>
 

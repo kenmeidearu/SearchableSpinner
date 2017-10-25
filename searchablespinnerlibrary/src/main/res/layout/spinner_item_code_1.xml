@@ -13,7 +13,6 @@
         android:layout_marginRight="4dp"
         android:gravity="left"
         android:text="isihead"
-        android:textColor="@android:color/black"
-        android:textSize="20sp">
+        android:textColor="@android:color/black">
     </TextView>
 </RelativeLayout>

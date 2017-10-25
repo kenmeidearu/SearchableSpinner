@@ -13,16 +13,7 @@
         android:layout_marginRight="4dp"
         android:gravity="left"
         android:text="isihead"
-        android:textSize="14sp"
-        android:textColor="@android:color/black">
+        android:textColor="@android:color/black"
+        android:textSize="20sp">
     </TextView>
-    <TextView
-        android:id="@+id/sub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerHead"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="2dp"
-        android:textSize="12sp"
-        android:text="Enjoy codes" />
 </RelativeLayout>
