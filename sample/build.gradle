@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.kenmeidearu.sample"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.5"
     }
@@ -16,13 +16,18 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        repositories {
+            maven { url "https://jitpack.io" }
+
+        }
     }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    //compile 'com.kenmeidearu.searchablespinner:searchablespinnerlibrary:1.5.0'
-   compile project(':searchablespinnerlibrary')
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.github.kenmeidearu:SearchableSpinner:1.5.4'
+    //compile project(':searchablespinnerlibrary')
 }

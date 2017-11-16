@@ -2,6 +2,10 @@ package com.kenmeidearu.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.kenmeidearu.searchablespinnerlibrary.SearchableSpinner;
 import com.kenmeidearu.searchablespinnerlibrary.mListString;
@@ -16,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SearchableSpinner sp = (SearchableSpinner) findViewById(R.id.spinner);
+        final SearchableSpinner sp1 = (SearchableSpinner) findViewById(R.id.spinner1);
 
         ArrayList<mListString> StringIsi = new ArrayList<>();//must crete this to generate data there are n1-n4
         customerNama = getResources().getStringArray(R.array.planets);
@@ -25,9 +30,34 @@ public class MainActivity extends AppCompatActivity {
             id++;
         }
         assert sp != null;
-        sp.setTitleList("--Select Customer--");//use this to create initial search first
-        sp.setAdapter(StringIsi, 2, 1);// type spinner 1-4, searh option 1-4
+        sp.setTitleList("--Select Planet--");//use this to create initial search first
+        sp.setAdapter(StringIsi, 2, 1);// type spinner 1-4, search option 1-4
 
+        //select customer
+        final ArrayList<mListString> listStringsCustomer = new ArrayList<>();
+        listStringsCustomer.add(new mListString(1,"Andi","Ambon Street","Active","New"));
+        listStringsCustomer.add(new mListString(2,"Budi","Bandung Street","Active","New"));
+        listStringsCustomer.add(new mListString(3,"Carli","Chille Street","Non Active","New"));
+        listStringsCustomer.add(new mListString(4,"Deni","Denmark Street","Active","New"));
+        listStringsCustomer.add(new mListString(5,"Eko","Estonia Street","Active","New"));
+        sp1.setTitleList("--Select Customer--");//use this to create initial search first
+        sp1.setAdapter(listStringsCustomer, 4, 4);// type spinner 1-4, search option 1-4
+
+
+        sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Log.e("tes posisi", id + " ," + position + "," + listStringsCustomer.get(position-1).get_id()+","+sp1.getSelectedItem().toString());
+
+                mListString layerName = ((mListString) sp1.getSelectedItem());
+                Toast.makeText(MainActivity.this,"You choose:"+ layerName.getNilai1(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
 }
