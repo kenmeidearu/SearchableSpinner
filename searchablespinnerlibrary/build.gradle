@@ -99,8 +99,8 @@ install {
 }
 
 dependencies {
-    implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 }
 
 task sourcesJar(type: Jar) {
