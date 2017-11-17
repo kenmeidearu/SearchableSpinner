@@ -143,7 +143,7 @@ public class ListAdapterSpinner extends BaseAdapter {
                // Log.e("isi image","image:"+valImage);
                 Picasso.with(mContext).setLoggingEnabled(true);
                 Picasso.with(mContext)
-                        .load(valImage)
+                        .load("http://api.androidhive.info/json/movies/1.jpg")
                         .placeholder(R.drawable.noimage)
                         .error(R.drawable.noimage)
                         .into(images);
