@@ -143,12 +143,13 @@ public class ListAdapterSpinner extends BaseAdapter {
             }
             if(holder.images!=null){
 
-                /*Picasso.with(mContext).setLoggingEnabled(true);
+                Picasso.with(mContext).setLoggingEnabled(true);
                 Picasso.with(mContext)
                         .load(valImage)
                         .placeholder(R.drawable.noimage)
                         .error(R.drawable.noimage)
-                        .into(holder.images);*/
+                        .into(holder.images);
+               /* Picasso.with(mContext).setLoggingEnabled(true);
                 Picasso picasso = new Picasso.Builder(mContext).listener(new Picasso.Listener() {
                     @Override public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception) {
                         exception.printStackTrace();
@@ -157,8 +158,8 @@ public class ListAdapterSpinner extends BaseAdapter {
                 picasso.load(valImage)
                         .placeholder(R.drawable.noimage)
                         .error(R.drawable.noimage)
-                        .into(holder.images);
-                Log.e("isi image","image:"+valImage);
+                        .into(holder.images);*/
+                Log.e("isi image",p.getNilai1()+" image:"+valImage);
             }
         }
 
