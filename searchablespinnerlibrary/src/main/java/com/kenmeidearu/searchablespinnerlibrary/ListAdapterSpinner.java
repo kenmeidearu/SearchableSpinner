@@ -7,7 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,14 +27,14 @@ public class ListAdapterSpinner extends BaseAdapter {
     int type;
 
 
-    public ListAdapterSpinner(Context context, List<mListString> worldpopulationlist, int type,String firstItem) {
+    public ListAdapterSpinner(Context context, List<mListString> worldpopulationlist, int type, String firstItem) {
         mContext = context;
-        ArrayList<mListString> temp=new ArrayList<>();
-        if(!TextUtils.isEmpty(firstItem)){
-            temp.add(new mListString(0,firstItem));
+        ArrayList<mListString> temp = new ArrayList<>();
+        if (!TextUtils.isEmpty(firstItem)) {
+            temp.add(new mListString(0, firstItem));
             temp.addAll(worldpopulationlist);
             this.worldpopulationlist = temp;
-        }else {
+        } else {
             this.worldpopulationlist = worldpopulationlist;
         }
         inflater = LayoutInflater.from(mContext);
@@ -71,11 +74,14 @@ public class ListAdapterSpinner extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = convertView;
         TextView nilai1, nilai2 = null, nilai3 = null, nilai4 = null;
+        ImageView images=null;
 
         if (v == null) {
             LayoutInflater vi;
             vi = LayoutInflater.from(mContext);
-            if (type == 1) {
+            if (type == 0) {
+                v = vi.inflate(R.layout.spinner_item_code_with_image, null);
+            } else if (type == 1) {
                 v = vi.inflate(R.layout.spinner_item_code_1, null);
             } else if (type == 2) {
                 v = vi.inflate(R.layout.spinner_item_code_2, null);
@@ -88,8 +94,12 @@ public class ListAdapterSpinner extends BaseAdapter {
             }
 
         }
-        if (type == 1) {
 
+        if (type == 0) {
+            images=(ImageView)v.findViewById(R.id.images);
+            nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+            nilai2 = (TextView) v.findViewById(R.id.sub);
+        } else if (type == 1) {
             nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
         } else if (type == 2) {
             nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
@@ -109,11 +119,12 @@ public class ListAdapterSpinner extends BaseAdapter {
 
         mListString p = getItem(position);
         if (p != null) {
-            String val1, val2, val3, val4;
+            String val1, val2, val3, val4,valImage;
             val1 = p.getNilai1();
             val2 = p.getNilai2();
             val3 = p.getNilai3();
             val4 = p.getNilai4();
+            valImage=p.getImageName();
 
             if (nilai1 != null) {
                 nilai1.setText(val1);
@@ -126,6 +137,13 @@ public class ListAdapterSpinner extends BaseAdapter {
             }
             if (nilai4 != null) {
                 nilai4.setText(val4);
+            }
+            if(images!=null){
+                Picasso.with(mContext)
+                        .load(valImage)
+                        .placeholder(R.drawable.noimage)
+                        .error(R.drawable.noimage)
+                        .into(images);
             }
         }
 

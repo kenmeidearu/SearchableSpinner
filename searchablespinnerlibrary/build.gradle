@@ -28,14 +28,14 @@ def siteUrl = 'https://github.com/kenmeidearu/SearchableSpinner'
 def gitUrl = 'https://github.com/kenmeidearu/SearchableSpinner.git'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 25
     buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 8
-        versionName "1.3.1"
+        versionName "1.5.2"
     }
     buildTypes {
     }
@@ -46,7 +46,7 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.5.0"
+version = "1.5.2"
 
 bintray {
     user = properties.getProperty("bintray.user")
@@ -99,6 +99,7 @@ install {
 }
 
 dependencies {
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
 
 task sourcesJar(type: Jar) {

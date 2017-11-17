@@ -5,8 +5,8 @@ import java.io.Serializable;
 /**
  * Created by kenjin on 11/11/2016.
  */
-public class  mListString implements Serializable {
-    private  int _id;
+public class mListString implements Serializable {
+    private int _id;
     private String nilai1;
     private String nilai2;
     private String nilai3;
@@ -17,33 +17,49 @@ public class  mListString implements Serializable {
     private String nilai8;
     private String nilai9;
     private String nilai10;
+    private String imageName;
 
     public mListString() {
     }
 
-    public mListString(int id,String nilai1) {
-        this._id=id;
+    public mListString(int id, String nilai1) {
+        this._id = id;
         this.nilai1 = nilai1;
     }
-    public mListString(int id,String nilai1,String nilai2,int nilai6) {
-        this._id=id;
+
+    public mListString(int id, String nilai1, String nilai2, String imageUrl) {
+        this._id = id;
         this.nilai1 = nilai1;
         this.nilai2 = nilai2;
         this.nilai6 = String.valueOf(nilai6);
     }
-    public mListString(int id,String nilai1, String nilai2) {
-        this._id=id;
+
+    public mListString(int id, String nilai1, String nilai2, int nilai6) {
+        this._id = id;
+        this.nilai1 = nilai1;
+        this.nilai2 = nilai2;
+        this.nilai6 = String.valueOf(nilai6);
+    }
+
+    public mListString(int id, String nilai1, String nilai2) {
+        this._id = id;
         this.nilai1 = nilai1;
         this.nilai2 = nilai2;
     }
-    public mListString(int id,String nilai1, String nilai2, String nilai3) {
-        this._id=id;
+
+    public mListString(int id, String nilai1, String nilai2, String nilai3orImageUrl, boolean isImage) {
+        this._id = id;
         this.nilai1 = nilai1;
         this.nilai2 = nilai2;
-        this.nilai3 = nilai3;
+        if (isImage) {
+            this.imageName = nilai3orImageUrl;
+        } else {
+            this.nilai3 = nilai3orImageUrl;
+        }
     }
-    public mListString(int id,String nilai1, String nilai2, String nilai3, String nilai4) {
-        this._id=id;
+
+    public mListString(int id, String nilai1, String nilai2, String nilai3, String nilai4) {
+        this._id = id;
         this.nilai1 = nilai1;
         this.nilai2 = nilai2;
         this.nilai3 = nilai3;
@@ -89,7 +105,7 @@ public class  mListString implements Serializable {
     public void setNilai4(String nilai4) {
         this.nilai4 = nilai4;
     }
-    
+
     public String getNilai5() {
         return nilai5;
     }
@@ -117,21 +133,32 @@ public class  mListString implements Serializable {
     public String getNilai8() {
         return nilai8;
     }
-     public void setNilai8(String nilai8) {
+
+    public void setNilai8(String nilai8) {
         this.nilai8 = nilai8;
     }
 
     public String getNilai9() {
         return nilai9;
     }
+
     public void setNilai9(String nilai9) {
         this.nilai9 = nilai9;
     }
-    
+
     public String getNilai10() {
         return nilai10;
     }
+
     public void setNilai10(String nilai10) {
         this.nilai9 = nilai10;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 }
