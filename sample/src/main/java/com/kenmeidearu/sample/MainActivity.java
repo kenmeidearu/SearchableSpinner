@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         final SearchableSpinner sp1 = (SearchableSpinner) findViewById(R.id.spinner1);
         SearchableSpinner sp2 = (SearchableSpinner) findViewById(R.id.spinner2);
 
+        //for two data
         ArrayList<mListString> StringIsi = new ArrayList<>();//must crete this to generate data there are n1-n4
         customerNama = getResources().getStringArray(R.array.planets);
         int id = 0;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         sp.setTitleList("--Select Planet--");//use this to create initial search first
         sp.setAdapter(StringIsi, 2, 1);// type spinner 1-4, search option 1-4
 
-        //select customer
+        //for 4 data
         final ArrayList<mListString> listStringsCustomer = new ArrayList<>();
         listStringsCustomer.add(new mListString(1, "Andi", "Ambon Street", "Active", "New"));
         listStringsCustomer.add(new mListString(2, "Budi", "Bandung Street", "Active", "New"));
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         sp1.setTitleList("--Select Customer--");//use this to create initial search first
         sp1.setAdapter(listStringsCustomer, 4, 4);// type spinner 1-4, search option 1-4
 
-
+        //for immage
         final ArrayList<mListString> listStringsNegara = new ArrayList<>();
         listStringsNegara.add(new mListString(1, "Indonesia", "INA", "https://id.wikipedia.org/wiki/Berkas:Flag_of_Indonesia.svg", true));
         listStringsNegara.add(new mListString(1, "Amerika Serikat", "USA", "https://id.wikipedia.org/wiki/Berkas:Flag_of_the_United_States.svg", true));
