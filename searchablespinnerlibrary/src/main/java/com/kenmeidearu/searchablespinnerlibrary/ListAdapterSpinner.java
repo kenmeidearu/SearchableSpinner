@@ -3,6 +3,7 @@ package com.kenmeidearu.searchablespinnerlibrary;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -139,6 +140,7 @@ public class ListAdapterSpinner extends BaseAdapter {
                 nilai4.setText(val4);
             }
             if(images!=null){
+                Log.e("isi image","image:"+valImage);
                 Picasso.with(mContext)
                         .load(valImage)
                         .placeholder(R.drawable.noimage)
