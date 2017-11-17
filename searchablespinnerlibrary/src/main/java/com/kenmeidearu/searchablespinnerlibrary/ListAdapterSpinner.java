@@ -2,9 +2,7 @@ package com.kenmeidearu.searchablespinnerlibrary;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.net.Uri;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,40 +92,39 @@ public class ListAdapterSpinner extends BaseAdapter {
             }
             holder = new ViewHolder();
             v.setTag(holder);
-        }else{
+        } else {
             holder = (ViewHolder) v.getTag();
         }
-
-        if (type == 0) {
-            holder.images=(ImageView)v.findViewById(R.id.images);
-            holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
-            holder.nilai2 = (TextView) v.findViewById(R.id.sub);
-        } else if (type == 1) {
-            holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
-        } else if (type == 2) {
-            holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
-            holder.nilai2 = (TextView) v.findViewById(R.id.sub);
-        } else if (type == 3) {
-            holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
-            holder.nilai2 = (TextView) v.findViewById(R.id.sub);
-            holder.nilai3 = (TextView) v.findViewById(R.id.sideHead);
-        } else if (type == 4) {
-            holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
-            holder.nilai2 = (TextView) v.findViewById(R.id.sub);
-            holder.nilai3 = (TextView) v.findViewById(R.id.sideHead);
-            holder.nilai4 = (TextView) v.findViewById(R.id.sideSub);
-        } else {
-            holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
-        }
-
         mListString p = getItem(position);
         if (p != null) {
-            String val1, val2, val3, val4,valImage;
+            if (type == 0) {
+                holder.images = (ImageView) v.findViewById(R.id.images);
+                holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+                holder.nilai2 = (TextView) v.findViewById(R.id.sub);
+            } else if (type == 1) {
+                holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+            } else if (type == 2) {
+                holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+                holder.nilai2 = (TextView) v.findViewById(R.id.sub);
+            } else if (type == 3) {
+                holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+                holder.nilai2 = (TextView) v.findViewById(R.id.sub);
+                holder.nilai3 = (TextView) v.findViewById(R.id.sideHead);
+            } else if (type == 4) {
+                holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+                holder.nilai2 = (TextView) v.findViewById(R.id.sub);
+                holder.nilai3 = (TextView) v.findViewById(R.id.sideHead);
+                holder.nilai4 = (TextView) v.findViewById(R.id.sideSub);
+            } else {
+                holder.nilai1 = (TextView) v.findViewById(R.id.spinnerHead);
+            }
+
+            String val1, val2, val3, val4, valImage;
             val1 = p.getNilai1();
             val2 = p.getNilai2();
             val3 = p.getNilai3();
             val4 = p.getNilai4();
-            valImage=p.getImageName();
+            valImage = p.getImageName();
 
             if (holder.nilai1 != null) {
                 holder.nilai1.setText(val1);
@@ -141,7 +138,7 @@ public class ListAdapterSpinner extends BaseAdapter {
             if (holder.nilai4 != null) {
                 holder.nilai4.setText(val4);
             }
-            if(holder.images!=null){
+            if (holder.images != null) {
 
                 Picasso.with(mContext).setLoggingEnabled(true);
                 Picasso.with(mContext)
@@ -159,7 +156,7 @@ public class ListAdapterSpinner extends BaseAdapter {
                         .placeholder(R.drawable.noimage)
                         .error(R.drawable.noimage)
                         .into(holder.images);*/
-                Log.e("isi image",val1 +" image:"+valImage);
+                // Log.e("isi image",val1 +" image:"+valImage);
             }
         }
 
@@ -169,7 +166,7 @@ public class ListAdapterSpinner extends BaseAdapter {
 
     public class ViewHolder {
         public TextView nilai1, nilai2 = null, nilai3 = null, nilai4 = null;
-        public ImageView images=null;
+        public ImageView images = null;
     }
 
     // Filter Class

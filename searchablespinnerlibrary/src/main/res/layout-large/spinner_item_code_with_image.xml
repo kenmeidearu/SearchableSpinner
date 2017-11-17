@@ -42,5 +42,4 @@
             android:text="detail"
             android:textSize="14sp" />
     </LinearLayout>
-
 </LinearLayout>
