@@ -159,7 +159,7 @@ public class ListAdapterSpinner extends BaseAdapter {
                         .placeholder(R.drawable.noimage)
                         .error(R.drawable.noimage)
                         .into(holder.images);*/
-                Log.e("isi image",p.getNilai1()+" image:"+valImage);
+                Log.e("isi image",val1 +" image:"+valImage);
             }
         }
 

@@ -29,7 +29,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.4.0'
-    compile 'com.github.kenmeidearu:SearchableSpinner:1.5.4-7'
+    compile 'com.github.kenmeidearu:SearchableSpinner:1.5.4-8'
     //compile project(':searchablespinnerlibrary')
     //compile project(path: ':searchablespinnerlibrary', configuration: 'default')
 }
