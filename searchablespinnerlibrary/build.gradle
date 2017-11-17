@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'searchable-spinner'
+    bintrayName = 'searchablespinner'
 
     publishedGroupId = 'com.kenmeidearu.searchablespinner'
     libraryName = 'SearchableSpinner'
-    artifact = 'searchable-spinner'
+    artifact = 'searchablespinner'
 
     libraryDescription = 'A custom spinner with an extra functionality of searching the items in the spinner.'
 

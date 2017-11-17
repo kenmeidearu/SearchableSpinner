@@ -140,7 +140,8 @@ public class ListAdapterSpinner extends BaseAdapter {
                 nilai4.setText(val4);
             }
             if(images!=null){
-                Log.e("isi image","image:"+valImage);
+               // Log.e("isi image","image:"+valImage);
+                Picasso.with(mContext).setLoggingEnabled(true);
                 Picasso.with(mContext)
                         .load(valImage)
                         .placeholder(R.drawable.noimage)

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         //for immage
         final ArrayList<mListString> listStringsNegara = new ArrayList<>();
-        listStringsNegara.add(new mListString(1, "Indonesia", "INA", "https://id.wikipedia.org/wiki/Berkas:Flag_of_Indonesia.svg", true));
+        listStringsNegara.add(new mListString(1, "Indonesia", "INA", "https://upload.wikimedia.org/wikipedia/id/2/2d/Bendera_Indonesia_%28Merah_Putih%29_by_Vibriel.jpg", true));
         listStringsNegara.add(new mListString(1, "Amerika Serikat", "USA", "https://id.wikipedia.org/wiki/Berkas:Flag_of_the_United_States.svg", true));
         listStringsNegara.add(new mListString(1, "England", "UK", "https://id.wikipedia.org/wiki/Berkas:Flag_of_the_United_Kingdom.svg", true));
         listStringsNegara.add(new mListString(1, "Jepang", "JP", "https://id.wikipedia.org/wiki/Berkas:Flag_of_Japan.svg", true));
