@@ -10,7 +10,7 @@ Searchable Spinner is a dialog spinner with the search feature which allows to s
 # Gradle
     dependencies {
         ...
-        compile 'kenmeidearu.searchablespinner:searchablespinnerlibrary:1.5.0'
+        implementation 'kenmeidearu.searchablespinner:searchablespinnerlibrary:1.5.0'
     }
 
 # Usage
